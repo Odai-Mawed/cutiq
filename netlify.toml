@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build:web"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# The ffmpeg core (~32 MB) never changes for a given version: cache it hard.
+[[headers]]
+  for = "/engine/vendor/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/engine/*"
+  [headers.values]
+    # The native app loads /engine/ inside a WebView; allow embedding.
+    X-Content-Type-Options = "nosniff"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

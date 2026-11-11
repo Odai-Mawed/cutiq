@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "CutIQ",
+    "slug": "cutiq",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cutiq.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.cutiq.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "name": "CutIQ \u2013 Stille aus Videos schneiden",
+      "shortName": "CutIQ",
+      "description": "Schneidet automatisch alle stillen Stellen aus Videos \u2013 direkt im Browser.",
+      "themeColor": "#5B4BFF",
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-sharing"
+    ]
+  }
+}
